@@ -14,15 +14,16 @@ let computerPlay = () => {
         break;
     }
 }
+let playerWins = 0;
+let computerWins = 0;
 for(i = 0; i < 5; i++)
 {
 game();
 }
+
     function game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         const computerSelection = computerPlay();
-        let playerWins = 0;
-        let computerWins = 0;
         let result = playRound(playerSelection, computerSelection);
         if(result === "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!")
         {
