@@ -14,14 +14,14 @@ function computerPlay () {
         break;
     }
 }
-console.log(playRound("rock", "paper"));
+console.log(playRound("scissors", "rock"));
 function playRound (playerSelection, computerSelection) {
     let LowerPS = playerSelection.toLowerCase(); 
     if (LowerPS === "rock" && computerSelection === "rock" || LowerPS === "paper" && computerSelection === "paper" || LowerPS === "scissors" && computerSelection === "scissors")
     {
         return "There was a tie!";
     }
-    else if(LowerPS === "rock" && computerSelection === "paper")
+    else if(LowerPS === "rock" && computerSelection === "paper" || LowerPS === "paper" && computerSelection === "scissors" || LowerPS === "scissors" && computerSelection === "rock")
     {
         return "You lose! (Computer) " + computerSelection + " beats " + LowerPS + " (You)!"
     }
