@@ -14,7 +14,6 @@ function computerPlay () {
         break;
     }
 }
-console.log(playRound("scissors", "rock"));
 function playRound (playerSelection, computerSelection) {
     let lowerPS = playerSelection.toLowerCase(); 
     if (lowerPS === "rock" && computerSelection === "rock" || lowerPS === "paper" && computerSelection === "paper" || lowerPS === "scissors" && computerSelection === "scissors")
@@ -31,3 +30,6 @@ function playRound (playerSelection, computerSelection) {
     }
 
 }
+const playerSelection = "rock";
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
