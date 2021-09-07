@@ -24,11 +24,11 @@ game();
         let playerWins = 0;
         let computerWins = 0;
         let result = playRound(playerSelection, computerSelection);
-        if(result === "You win! (You) " + lowerPS + " beats " + computerSelection + " (Computer)!")
+        if(result === "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!")
         {
             playerWins += 1;
         }
-        else if(result === "You lose! (Computer) " + computerSelection + " beats " + lowerPS + " (You)!")
+        else if(result === "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!")
         {
             computerWins += 1;
         }
