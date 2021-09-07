@@ -17,6 +17,8 @@ function computerPlay () {
 Game();
 Game();
 Game();
+Game();
+Game();
     function Game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         const computerSelection = computerPlay();
