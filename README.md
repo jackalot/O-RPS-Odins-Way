@@ -1,0 +1,1 @@
+This will be a Rock Paper Scissors game made in the style of the odin project.
