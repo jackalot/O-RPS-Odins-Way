@@ -16,14 +16,18 @@ function computerPlay () {
 }
 console.log(playRound("scissors", "rock"));
 function playRound (playerSelection, computerSelection) {
-    let LowerPS = playerSelection.toLowerCase(); 
-    if (LowerPS === "rock" && computerSelection === "rock" || LowerPS === "paper" && computerSelection === "paper" || LowerPS === "scissors" && computerSelection === "scissors")
+    let lowerPS = playerSelection.toLowerCase(); 
+    if (lowerPS === "rock" && computerSelection === "rock" || lowerPS === "paper" && computerSelection === "paper" || lowerPS === "scissors" && computerSelection === "scissors")
     {
         return "There was a tie!";
     }
-    else if(LowerPS === "rock" && computerSelection === "paper" || LowerPS === "paper" && computerSelection === "scissors" || LowerPS === "scissors" && computerSelection === "rock")
+    else if(lowerPS === "rock" && computerSelection === "paper" || lowerPS === "paper" && computerSelection === "scissors" || lowerPS === "scissors" && computerSelection === "rock")
     {
-        return "You lose! (Computer) " + computerSelection + " beats " + LowerPS + " (You)!"
+        return "You lose! (Computer) " + computerSelection + " beats " + lowerPS + " (You)!"
+    }
+    else
+    {
+        return "You win! (You) " + LowerPS + " beats " + computerSelection + " (You)!";
     }
 
 }
