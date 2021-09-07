@@ -14,7 +14,12 @@ function computerPlay () {
         break;
     }
 }
-function playRound (playerSelection, computerSelection) {
+    function Game () {
+        const playerSelection = "rock";
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+    function playRound (playerSelection, computerSelection) {
     let lowerPS = playerSelection.toLowerCase(); 
     if (lowerPS === "rock" && computerSelection === "rock" || lowerPS === "paper" && computerSelection === "paper" || lowerPS === "scissors" && computerSelection === "scissors")
     {
@@ -29,7 +34,4 @@ function playRound (playerSelection, computerSelection) {
         return "You win! (You) " + lowerPS + " beats " + computerSelection + " (Computer)!";
     }
 
-}
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+    }
