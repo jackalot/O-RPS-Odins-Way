@@ -23,8 +23,9 @@ game();
 
     function game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
+        let lowerPS = playerSelection.toLowerCase(); 
         const computerSelection = computerPlay();
-        let result = playRound(playerSelection, computerSelection);
+        let result = playRound(lowerPS, computerSelection);
         if(result === "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!")
         {
             playerWins += 1;
@@ -35,8 +36,7 @@ game();
         }
         console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
-    function playRound (playerSelection, computerSelection) {
-    let lowerPS = playerSelection.toLowerCase(); 
+    function playRound (lowerPS, computerSelection) {
     if (lowerPS === "rock" && computerSelection === "rock" || lowerPS === "paper" && computerSelection === "paper" || lowerPS === "scissors" && computerSelection === "scissors")
     {
         return "There was a tie!";
