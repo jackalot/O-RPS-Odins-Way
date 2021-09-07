@@ -8,7 +8,6 @@ switch(compChoice)
     return "rock";
     case 1:
     return "paper";
-    return
     case 2:
     return "scissors";
     default:
