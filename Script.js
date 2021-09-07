@@ -26,11 +26,11 @@ game();
         let lowerPS = playerSelection.toLowerCase(); 
         const computerSelection = computerPlay();
         let result = playRound(lowerPS, computerSelection);
-        if(result === "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!")
+        if(result === "You win! (You) " + lowerPS + " beats " + computerSelection + " (Computer)!")
         {
             playerWins += 1;
         }
-        else if(result === "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!")
+        else if(result === "You lose! (Computer) " + computerSelection + " beats " + lowerPS + " (You)!")
         {
             computerWins += 1;
         }
