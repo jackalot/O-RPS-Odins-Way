@@ -14,11 +14,10 @@ function computerPlay () {
         break;
     }
 }
+for(i = 0; i < 5; i++)
+{
 Game();
-Game();
-Game();
-Game();
-Game();
+}
     function Game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         const computerSelection = computerPlay();
