@@ -27,7 +27,7 @@ function playRound (playerSelection, computerSelection) {
     }
     else
     {
-        return "You win! (You) " + LowerPS + " beats " + computerSelection + " (You)!";
+        return "You win! (You) " + LowerPS + " beats " + computerSelection + " (Computer)!";
     }
 
 }
