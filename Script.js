@@ -21,7 +21,9 @@ game();
     function game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
+        let playerWins = 0;
+        let computerWins = 0;
+        let result = playRound(playerSelection, computerSelection);
     }
     function playRound (playerSelection, computerSelection) {
     let lowerPS = playerSelection.toLowerCase(); 
