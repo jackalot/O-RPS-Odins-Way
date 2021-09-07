@@ -14,7 +14,7 @@ function computerPlay () {
         break;
     }
 }
-playRound("rock", "paper");
+console.log(playRound("rock", "paper"));
 function playRound (playerSelection, computerSelection) {
     let LowerPS = playerSelection.toLowerCase(); 
     if (LowerPS === "rock" && computerSelection === "rock" || LowerPS === "paper" && computerSelection === "paper" || LowerPS === "scissors" && computerSelection === "scissors")
@@ -23,7 +23,7 @@ function playRound (playerSelection, computerSelection) {
     }
     else if(LowerPS === "rock" && computerSelection === "paper")
     {
-        return "You lose! " + computerSelection + " beats " + LowerPS + "(you)!"
+        return "You lose! (Computer) " + computerSelection + " beats " + LowerPS + " (You)!"
     }
 
 }
