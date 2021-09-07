@@ -15,5 +15,6 @@ function computerPlay () {
     }
 }
 function playRound (playerSelection, computerSelection) {
- let LowerCased = playerSelection.toString();
+ let playerSelection = playerSelection.toLowerCase();
+
 }
