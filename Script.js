@@ -1,4 +1,4 @@
-function computerPlay () {
+let computerPlay = () => {
     let compChoice = Math.floor(Math.random() * 3);
     console.log(compChoice);
     switch(compChoice)
