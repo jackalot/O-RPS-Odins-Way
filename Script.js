@@ -16,7 +16,7 @@ function computerPlay () {
 }
 function playRound (playerSelection, computerSelection) {
     let LowerPS = playerSelection.toLowerCase();
-    if (LowerPS === "Rock" && computerSelection === "Rock")
+    if (LowerPS === "Rock" && computerSelection === "Rock" || LowerPS === "Paper" && computerSelection === "Paper" || LowerPS === "Scissors" && computerSelection === "Scissors")
     {
         console.log("There was a tie!");
     }
