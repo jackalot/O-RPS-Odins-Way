@@ -14,11 +14,12 @@ function computerPlay () {
         break;
     }
 }
+playRound("paper", "paper");
 function playRound (playerSelection, computerSelection) {
     let LowerPS = playerSelection.toLowerCase(); 
     if (LowerPS === "rock" && computerSelection === "rock" || LowerPS === "paper" && computerSelection === "paper" || LowerPS === "scissors" && computerSelection === "scissors")
     {
         console.log("There was a tie!");
-    }
-    
+    } 
+
 }
