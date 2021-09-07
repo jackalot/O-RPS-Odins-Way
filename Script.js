@@ -16,9 +16,9 @@ function computerPlay () {
 }
 for(i = 0; i < 5; i++)
 {
-Game();
+game();
 }
-    function Game () {
+    function game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
