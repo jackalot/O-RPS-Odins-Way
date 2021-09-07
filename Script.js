@@ -32,6 +32,7 @@ game();
         {
             computerWins += 1;
         }
+        console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
     function playRound (playerSelection, computerSelection) {
     let lowerPS = playerSelection.toLowerCase(); 
