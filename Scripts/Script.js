@@ -16,11 +16,6 @@ let computerPlay = () => {
 }
 let playerWins = 0;
 let computerWins = 0;
-for(i = 0; i < 5; i++)
-{
-game();
-}
-
     function game () {
         const playerSelection = window.prompt("Choose Rock, Paper or Scissors");
         let lowerPS = playerSelection.toLowerCase(); 
