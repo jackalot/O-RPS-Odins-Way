@@ -1,4 +1,3 @@
-
 let computerPlay = () => {
     let compChoice = Math.floor(Math.random() * 3);
     console.log(compChoice);
@@ -30,6 +29,8 @@ let computerWins = 0;
         }
         const winnerContainer = document.querySelector("#Winner");
         const Paragraph = document.createElement("p");
+        Paragraph.textContent = result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins;
+        winnerContainer.append(Paragraph);
         console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
     function playRound (playerSelection, computerSelection) {
