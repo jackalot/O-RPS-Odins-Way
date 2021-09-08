@@ -18,31 +18,30 @@ let computerPlay = () => {
 let playerWins = 0;
 let computerWins = 0;
     function game (playerSelection) {
-        let lowerPS = playerSelection.toLowerCase(); 
         const computerSelection = computerPlay();
-        let result = playRound(lowerPS, computerSelection);
-        if(result === "You win! (You) " + lowerPS + " beats " + computerSelection + " (Computer)!")
+        let result = playRound(playerSelection, computerSelection);
+        if(result === "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!")
         {
             playerWins += 1;
         }
-        else if(result === "You lose! (Computer) " + computerSelection + " beats " + lowerPS + " (You)!")
+        else if(result === "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!")
         {
             computerWins += 1;
         }
         console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
-    function playRound (lowerPS, computerSelection) {
-    if (lowerPS === "rock" && computerSelection === "rock" || lowerPS === "paper" && computerSelection === "paper" || lowerPS === "scissors" && computerSelection === "scissors")
+    function playRound (playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors")
     {
         return "There was a tie!";
     }
-    else if(lowerPS === "rock" && computerSelection === "paper" || lowerPS === "paper" && computerSelection === "scissors" || lowerPS === "scissors" && computerSelection === "rock")
+    else if(playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock")
     {
-        return "You lose! (Computer) " + computerSelection + " beats " + lowerPS + " (You)!"
+        return "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!"
     }
     else
     {
-        return "You win! (You) " + lowerPS + " beats " + computerSelection + " (Computer)!";
+        return "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!";
     }
 
     }
