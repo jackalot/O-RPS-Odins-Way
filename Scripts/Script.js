@@ -1,3 +1,9 @@
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        game();
+    })
+})
 let computerPlay = () => {
     let compChoice = Math.floor(Math.random() * 3);
     console.log(compChoice);
