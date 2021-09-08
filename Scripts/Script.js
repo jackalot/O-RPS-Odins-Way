@@ -14,8 +14,8 @@ let computerPlay = () => {
         break;
     }
 }
-let playerWins = 0;
-let computerWins = 0;
+    let playerWins = 0;
+    let computerWins = 0;
     function game (playerSelection) {
         const computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
@@ -28,23 +28,24 @@ let computerWins = 0;
             computerWins += 1;
         }
         const winnerContainer = document.querySelector("#Winner");
-        const Paragraph = document.createElement("p");
+        const Paragraph = winnerContainer.firstChild;
         Paragraph.textContent = result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins;
         winnerContainer.append(Paragraph);
         console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
-    function playRound (playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors")
+    function playRound (playerSelection, computerSelection) 
     {
-        return "There was a tie!";
-    }
-    else if(playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock")
-    {
-        return "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!"
-    }
-    else
-    {
-        return "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!";
-    }
+        if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors")
+        {
+            return "There was a tie!";
+        }
+        else if(playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock")
+        {
+            return "You lose! (Computer) " + computerSelection + " beats " + playerSelection + " (You)!"
+        }
+        else
+        {
+            return "You win! (You) " + playerSelection + " beats " + computerSelection + " (Computer)!";
+        }
 
     }
