@@ -29,6 +29,7 @@ let computerWins = 0;
             computerWins += 1;
         }
         const winnerContainer = document.querySelector("#Winner");
+        const Paragraph = document.createElement("p");
         console.log(result + " Player Wins: " + playerWins + " Computer Wins: " + computerWins);
     }
     function playRound (playerSelection, computerSelection) {
